@@ -9,7 +9,7 @@
 //
 package setmultimap
 
-import multimap "github.com/jwangsadinata/go-multimap"
+import multimap "github.com/majiddarvishan/go-multimap"
 
 var exists = struct{}{}
 

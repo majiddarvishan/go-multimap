@@ -11,7 +11,7 @@
 //
 package slicemultimap
 
-import multimap "github.com/jwangsadinata/go-multimap"
+import multimap "github.com/majiddarvishan/go-multimap"
 
 // MultiMap holds the elements in go's native map.
 type MultiMap struct {
@@ -79,6 +79,22 @@ func (m *MultiMap) Remove(key interface{}, value interface{}) {
 		for i, v := range values {
 			if v == value {
 				m.m[key] = append(values[:i], values[i+1:]...)
+			}
+		}
+	}
+	if len(m.m[key]) == 0 {
+		delete(m.m, key)
+	}
+}
+
+// RemoveSpecific removes a single key from this multimap, if callback returns true.
+func (m *MultiMap) RemoveSpecific(key interface{}, f func(interface{}) bool) {
+	values, found := m.m[key]
+	if found {
+		for i, v := range values {
+            if(f(v)) {
+				m.m[key] = append(values[:i], values[i+1:]...)
+                break
 			}
 		}
 	}

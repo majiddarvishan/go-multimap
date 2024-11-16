@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/jwangsadinata/go-multimap/slicemultimap"
+	"github.com/majiddarvishan/go-multimap/slicemultimap"
 )
 
 // The following examples is to demonstrate basic usage of MultiMap.

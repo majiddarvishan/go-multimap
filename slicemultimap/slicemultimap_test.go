@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	multimap "github.com/jwangsadinata/go-multimap"
+	multimap "github.com/majiddarvishan/go-multimap"
 )
 
 func AssertMultiMapImplementation(t *testing.T) {

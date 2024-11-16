@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/jwangsadinata/go-multimap/setmultimap"
+	"github.com/majiddarvishan/go-multimap/setmultimap"
 )
 
 // The following examples is to demonstrate basic usage of MultiMap.
